@@ -45,6 +45,45 @@ Therefore the reported "tmin" includes:
 
 This is documented explicitly when comparing against Table 4 and Table 5.
 
+## Machine Specification (Replication Environment)
+
+All experiments were replicated on a **single local workstation**.
+No cloud services, clusters, GPUs, or distributed execution were used.
+
+**Hardware**
+- Manufacturer / Model: Dell Latitude 7490
+- CPU: Intel® Core™ i7-8650U @ 1.90 GHz  
+  (4 physical cores, 8 logical processors)
+- RAM: 16 GB (15.9 GB usable)
+- Architecture: x64-based PC
+- Storage: Local SSD (system disk)
+
+**Operating System**
+- OS: Microsoft Windows 11 Pro (64-bit)
+- Version: 10.0.26200 (Build 26200)
+
+**Software Environment**
+- Python: Python 3.14.2 (64-bit)
+- Virtual environment: `venv`
+
+**Execution Notes**
+- All experiments were executed sequentially on this machine.
+- Configurations with `k = 4` were memory-intensive and significantly slower.
+- 16 GB RAM was sufficient to complete all runs, but with high memory usage.
+- Reported runtimes are therefore machine-dependent and may differ on other hardware.
+
+## Original Paper – Machine Specification
+
+According to the paper *“Mining Behavioral Patterns for Conformance Diagnostics”*, the original experiments were executed under the following hardware and software conditions:
+
+- Operating System: Ubuntu 22.04
+- CPU: Intel Xeon E-2276M
+- Memory: 32 GB RAM
+- Execution mode: Single-threaded
+
+The authors report that all experiments were run without parallelization. Differences in absolute runtime between the original paper and this replication are therefore expected due to differences in hardware and operating system, while the observed scalability trends remain comparable.
+
+
 ### How to run the replication experiments
 This repository replicates the quantitative evaluation (Tables 4 and 5) from “Mining Behavioral Patterns for Conformance Diagnostics” using the authors’ released Python artifact.
 #### 1) Prerequisites
